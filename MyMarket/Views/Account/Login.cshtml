@@ -1,0 +1,29 @@
+﻿@model MyMarket.Models.LoginViewModel
+<div>
+    <h1>Entrance to the personal account</h1>
+    <br /><br /><br />
+
+    <div class="div-box">
+        <form asp-area="" asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+            <div asp-validation-summary="All"></div>
+            <div>
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" /> 
+                <span asp-validation-for="UserName"></span>
+            </div>
+            <br /><br />
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <br /><br />
+
+            <div>
+                <input type="submit" value="Sign in" />
+            </div>
+            <br /><br /><br />
+
+        </form>
+    </div>
+</div>
